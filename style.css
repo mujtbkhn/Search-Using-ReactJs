@@ -13,7 +13,8 @@ ul > li {
     padding: 10px;
 }
 .card {
-    width: 300px;
+    max-width: 300px;
+    max-height: 300px;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
@@ -28,9 +29,12 @@ ul > li {
   }
   
   .card img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 160px;
     border-radius: 8px;
     margin-bottom: 8px;
+    
+    
   }
   
   .card h1 {
@@ -61,4 +65,11 @@ ul > li {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .search{
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 8px;
   }

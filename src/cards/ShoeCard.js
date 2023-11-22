@@ -1,12 +1,13 @@
 
 export const ShoeCard = ({ img, title, category, newPrice }) => {
-    console.log();
+    
+    const truncateTitle = title.length > 15 ? title.slice(0, 15) + "..." : title
     return (
         <div className="card">
             <img src={img} alt={title} />
-            <h1>{title}</h1>
+            <h1>{truncateTitle}</h1>
             <h4>{category}</h4>
-            <h3>{`${newPrice}`}</h3>
+            <h3>{`$${newPrice}`}</h3>
         </div>
     )
 }

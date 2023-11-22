@@ -2955,24 +2955,12 @@ var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _footer = require("./components/Footer");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 9,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footer.Footer), {}, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            fileName: "src/app.js",
+            lineNumber: 9,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/app.js",
         lineNumber: 7,
         columnNumber: 10
@@ -2980,8 +2968,6 @@ const AppLayout = ()=>{
 };
 _c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-// root.render(ReactComponent())
-// root.render(<HeaderComponent />)
 root.render(AppLayout());
 var _c;
 $RefreshReg$(_c, "AppLayout");
@@ -44598,21 +44584,15 @@ var _constants = require("../../constants");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    // const searchTxt = "Puma" js variable
     const [searchText, setSearchText] = (0, _react.useState)(""); //react useState variable
     const [completeShoeLists, setCompleteShoeLists] = (0, _react.useState)((0, _constants.ShoesList));
     const [shoeLists, setShoeLists] = (0, _react.useState)((0, _constants.ShoesList));
-    // function filterData(searchText, completeShoeLists) {
-    //     const filteredData = completeShoeLists.filter((shoes) => shoes.title.toLowerCase().includes(searchText.toLowerCase()))
-    //     return filteredData
-    // }
     const handleSearch = (e)=>{
         const newText = e.target.value;
         setSearchText(newText);
         const filteredData = completeShoeLists.filter((shoes)=>shoes.title.toLowerCase().includes(newText.toLowerCase()));
         setShoeLists(filteredData);
     };
-    // const [searchClicked, setSearchClicked] = useState(false)
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -44623,7 +44603,7 @@ const Body = ()=>{
                 onChange: handleSearch
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 27,
+                lineNumber: 16,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44634,7 +44614,7 @@ const Body = ()=>{
                         key: shoe.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 40,
+                            lineNumber: 21,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -44642,7 +44622,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 38,
+                lineNumber: 19,
                 columnNumber: 13
             }, undefined)
         ]
@@ -44671,7 +44651,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ShoeCard", ()=>ShoeCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const ShoeCard = ({ img, title, category, newPrice })=>{
-    console.log();
+    const truncateTitle = title.length > 15 ? title.slice(0, 15) + "..." : title;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -44684,7 +44664,7 @@ const ShoeCard = ({ img, title, category, newPrice })=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: title
+                children: truncateTitle
             }, void 0, false, {
                 fileName: "src/cards/ShoeCard.js",
                 lineNumber: 10,
@@ -44698,7 +44678,7 @@ const ShoeCard = ({ img, title, category, newPrice })=>{
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: `${newPrice}`
+                children: `$${newPrice}`
             }, void 0, false, {
                 fileName: "src/cards/ShoeCard.js",
                 lineNumber: 12,

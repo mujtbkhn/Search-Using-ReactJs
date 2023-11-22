@@ -8,16 +8,14 @@ const AppLayout = () => {
     return (
 
         <React.Fragment>
-            <Header />
+            {/* <Header /> */}
             <Body />
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
-// root.render(ReactComponent())
-// root.render(<HeaderComponent />)
 
 root.render(AppLayout())
